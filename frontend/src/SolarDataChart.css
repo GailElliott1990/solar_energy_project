@@ -1,0 +1,43 @@
+/* src/SolarForecastChart.css */
+
+.chart-container {
+  position: relative; /* Ensure the container is positioned relatively for absolute positioning of tooltip */
+  margin: auto;
+  height: 60vh; /* Increased height to ensure all chart elements are visible */
+  width: 90vw; /* Increased width for better visibility on larger screens */
+  max-width: 1200px; /* Optional: Limit maximum width for better readability */
+}
+
+.custom-tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.85); /* Slightly darker background for better contrast */
+  color: #fff; /* White text */
+  padding: 8px 12px; /* Increased padding for better readability */
+  border-radius: 6px; /* More rounded corners for aesthetics */
+  pointer-events: none; /* Ensure tooltip doesn't interfere with mouse events */
+  white-space: nowrap; /* Prevent text from wrapping */
+  transform: translate(-50%, -120%); /* Position tooltip slightly higher above the cursor */
+  z-index: 20; /* Increased z-index to ensure tooltip appears above all chart elements */
+  font-size: 1em; /* Standardized font size for consistency */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+}
+
+/* Optional: Styling for the chart title */
+.chart-container .chartjs-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Optional: Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .chart-container {
+    height: 50vh; /* Adjust height for smaller screens */
+    width: 95vw; /* Adjust width for smaller screens */
+  }
+
+  .custom-tooltip {
+    font-size: 0.9em; /* Slightly smaller font on smaller screens */
+    padding: 6px 10px; /* Adjust padding */
+  }
+}

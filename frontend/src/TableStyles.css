@@ -1,0 +1,17 @@
+/* TableStyles.css */
+
+.solar-forecast-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.solar-forecast-table th,
+.solar-forecast-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.solar-forecast-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}

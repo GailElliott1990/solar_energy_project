@@ -1,0 +1,57 @@
+/* src/SolarForecastTable.css */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling on small screens */
+  margin-bottom: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif; /* Ensure consistent font */
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: 700;
+  color: #333333;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #eaeaea;
+}
+
+td.highlight {
+  background-color: #d1e7dd; /* Light green background */
+  color: #0f5132; /* Dark green text */
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  th,
+  td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  th,
+  td {
+    padding: 8px;
+  }
+}

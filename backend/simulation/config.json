@@ -1,0 +1,8 @@
+{
+	"SOLCAST_API_KEY": "YZ-6gyDWzLpoAs90nLaneD0jw3lKxl_a",
+	"ROOFTOP_SITE_ID": "e5eb-70f5-759c-1f95",
+	"OUTPUT_CSV": "/Users/jasonnewton/Documents/python/solar_energy_project/backend/simulation/solar_forecasts.csv",
+	"LATITUDE": 51.203571,
+	"LONGITUDE": -3.471924,
+	"FETCH_INTERVAL": 1800
+}
