@@ -17,9 +17,12 @@ function App() {
   const [tilt, setTilt] = useState(30);
   const [azimuth, setAzimuth] = useState(180);
 
-  // Fetch data from the NREL PVWatts API
+  // Replace this with your actual Elastic Beanstalk endpoint
+  const baseURL = 'http://my-env.eba-xyz123.us-east-1.elasticbeanstalk.com';
+  
+  // Fetch data from the NREL PVWatts API via your deployed backend
   const fetchPVWattsData = useCallback(() => {
-    const apiUrl = `http://localhost:5001/api/pvwatts?tilt=${tilt}&azimuth=${azimuth}`;
+    const apiUrl = `${baseURL}/api/pvwatts?tilt=${tilt}&azimuth=${azimuth}`;
 
     fetch(apiUrl)
       .then((response) => {
@@ -58,7 +61,7 @@ function App() {
         setErrorMessage(error.message || 'Failed to fetch data from the server.');
         setForecastData([]);
       });
-  }, [multiplier, tilt, azimuth]);
+  }, [multiplier, tilt, azimuth, baseURL]);
 
   useEffect(() => {
     fetchPVWattsData();
