@@ -1,11 +1,14 @@
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
 
+// Log at startup to confirm environment variable availability
+console.log("Starting application...");
+console.log("NREL_API_KEY:", process.env.NREL_API_KEY);
+
 const NREL_API_KEY = process.env.NREL_API_KEY;
 
-// If you haven't set NREL_API_KEY in .env, ensure it's present
+// If NREL_API_KEY isn't set by the environment, log an error and exit
 if (!NREL_API_KEY) {
   console.error("NREL_API_KEY is not set in environment variables.");
   process.exit(1);
@@ -13,12 +16,12 @@ if (!NREL_API_KEY) {
 
 const app = express();
 
-// Configure CORS as needed. Update origins if your frontend is hosted elsewhere.
+// Configure CORS as needed. If your frontend is deployed elsewhere, update origins accordingly.
 app.use(cors({
-  origin: ['http://localhost:3000'] // Add your actual frontend domain here when deployed
+  origin: ['http://localhost:3000'] // Update this if your frontend is hosted elsewhere
 }));
 
-// NREL PVWatts API configuration (as in the Python code)
+// NREL PVWatts API configuration
 const LAT = 51.20578;
 const LON = 3.47789;
 const SYSTEM_CAPACITY = 4;
@@ -30,6 +33,7 @@ const LOSSES = 10;
 const NREL_API_URL = "https://developer.nrel.gov/api/pvwatts/v6.json";
 
 app.get('/api/pvwatts', async (req, res) => {
+  console.log("Received request to /api/pvwatts");
   try {
 	const tilt_param = parseFloat(req.query.tilt) || DEFAULT_TILT;
 	const azimuth_param = parseFloat(req.query.azimuth) || DEFAULT_AZIMUTH;
@@ -69,8 +73,13 @@ app.get('/api/pvwatts', async (req, res) => {
   }
 });
 
-// Use PORT env variable or default to 5001
+app.get('/', (req, res) => {
+  console.log("Received request to /");
+  res.send('Welcome to the Solar Energy Project API!');
+});
+
+// Use PORT from environment variables or default to 8080
 const port = process.env.PORT || 8080;
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server running on port ${port}`);
 });
