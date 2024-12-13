@@ -17,8 +17,8 @@ function App() {
   const [tilt, setTilt] = useState(30);
   const [azimuth, setAzimuth] = useState(180);
 
-  // Replace this with your actual Elastic Beanstalk endpoint
-  const baseURL = 'http://my-env.eba-xyz123.us-east-1.elasticbeanstalk.com';
+  // Replace this with your actual aws apprunner
+  const baseURL = 'https://aq8fwnu9jp.eu-west-1.awsapprunner.com/';
   
   // Fetch data from the NREL PVWatts API via your deployed backend
   const fetchPVWattsData = useCallback(() => {
