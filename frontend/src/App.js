@@ -18,7 +18,7 @@ function App() {
   const [azimuth, setAzimuth] = useState(180);
 
   // Replace this with your actual aws apprunner
-  const baseURL = 'https://aq8fwnu9jp.eu-west-1.awsapprunner.com/';
+  const baseURL = 'https://aq8fwnu9jp.eu-west-1.awsapprunner.com';
   
   // Fetch data from the NREL PVWatts API via your deployed backend
   const fetchPVWattsData = useCallback(() => {
