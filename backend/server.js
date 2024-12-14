@@ -18,7 +18,10 @@ const app = express();
 
 // Configure CORS as needed. If your frontend is deployed elsewhere, update origins accordingly.
 app.use(cors({
-  origin: ['http://localhost:3000'] // Update this if your frontend is hosted elsewhere
+  origin: [
+	'https://main.d3n8t63qk2ub8q.amplifyapp.com', 
+	'https://aq8fwnu9jp.eu-west-1.awsapprunner.com'
+  ]
 }));
 
 // NREL PVWatts API configuration

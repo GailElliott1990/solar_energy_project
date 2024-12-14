@@ -338,8 +338,21 @@ tbody tr:hover {
    
      .chart-container {
        margin: 10px 0;
-       /* Allow horizontal scrolling if chart overflows */
+       /* Allow horizontal scrolling if the chart overflows */
        overflow-x: auto;
        max-width: 100%;
      }
+   }
+   
+   .github-link {
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     font-size: 0.9em;
+     color: #555;
+     text-decoration: none;
+   }
+   
+   .github-link:hover {
+     color: #333;
    }

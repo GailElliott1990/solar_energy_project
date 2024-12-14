@@ -80,6 +80,16 @@ function App() {
   return (
     <div className="App">
       <h1>Solar Energy Data</h1>
+      {/* Subtle GitHub link at the top right or top section */}
+      <a 
+        className="github-link" 
+        href="https://github.com/yourusername/yourrepo" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+
       {errorMessage && <p className="error-message">{errorMessage}</p>}
       {lastUpdateTime && (
         <p className="last-update">Last data update: {new Date(lastUpdateTime).toLocaleString()}</p>
