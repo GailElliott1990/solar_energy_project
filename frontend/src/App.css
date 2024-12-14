@@ -195,7 +195,7 @@ tbody tr:hover {
   background-color: #eaeaea;
 }
 
-/* Responsive adjustments */
+/* Existing Responsive adjustments */
 @media (max-width: 800px) {
   .App {
     padding: 15px;
@@ -229,5 +229,58 @@ tbody tr:hover {
 
   h1 {
     font-size: 1.2em;
+  }
+}
+
+/* iPad-Specific Adjustments */
+
+/* iPad portrait (≤768px) */
+/* This will refine styles specifically for iPad portrait mode. It appears after the
+   max-width: 800px rule, allowing more fine-tuned adjustments at a narrower breakpoint. */
+@media (max-width: 768px) {
+  /* Slightly larger text for readability on iPad portrait */
+  body {
+    font-size: 1.05rem;
+  }
+
+  .App {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  /* Ensure good spacing for touch targets */
+  button {
+    padding: 12px 20px;
+    font-size: 1.05em;
+  }
+
+  /* Adjust table font-size slightly for clarity */
+  table {
+    font-size: 0.95em;
+  }
+}
+
+/* iPad landscape (769px to 1024px) */
+/* When in landscape, we have a bit more horizontal space. Adjust layout to use it effectively. */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .App {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  /* If you need a two-column layout for chart or sliders, you can use grid here:
+     Just an example, adjust as needed based on your actual HTML structure. */
+
+  .sliders-row {
+    gap: 30px;
+  }
+
+  button {
+    font-size: 1.05em;
+    padding: 12px 22px;
   }
 }
