@@ -1,12 +1,9 @@
-This is a web application built using React and Python. I had never coded an application before and with my limited experience, I often found myself googling python errors and relying on the help of other programmers. 
+This web application was built using React for the frontend and Python for the backend. Before starting this project, I had never developed an application before, and my limited experience meant I spent a lot of time searching online for solutions to Python errors and seeking guidance from other programmers.
 
-I begin with trying to take data from Solcast using their API and passing it as a CSV file. My intention was to have C++ perform calculations on the data and then pass it to Python. After about two weeks, I found that this approach prresented too many obstacles and, in a way, I was over-complicating the whole process.
+Initially, I attempted to integrate data from the Solcast API and export it as a CSV file. The plan was to use C++ for calculations and then pass the results back into Python. After roughly two weeks, however, I realized this approach introduced unnecessary complexity and obstacles.
 
-I decided to keep everything in Python for the backend. I then moved away from Solcast and breifly flirted with the NASA API but again, I came up againsts problems parsing the JSON data.
+I decided to streamline the process by keeping the entire backend in Python. After briefly experimenting with the NASA API and running into challenges parsing JSON data, I finally settled on using the NREL API, which proved to be much more manageable.
 
-Finally, I settled on NERL. Their API worked much better. Additional obstacles I emcountered ove the six week project window were mostly issues with porting the application to AWS. I tried Elastic Beanstalk and found problems that would not be solved in time. I finally found luck with AWS Amplify. 
+Over the course of the seven-week development window, I encountered additional hurdles, mainly related to deploying the application on AWS. Elastic Beanstalk presented issues I couldn’t resolve within the project’s timeframe, but AWS Amplify ultimately offered a suitable solution.
 
-I use python on the backend to take solar irradiance data from NERL and construct a graph and table.
-The sliders can be adjusted in real time to control the calculations for both the graph and table. 
-
-The application (both front and back) are hosted on AWS.
+The final product fetches solar irradiance data from the NREL API, and the Python backend generates both a graph and a data table for the user. Interactive sliders on the frontend allow for real-time adjustments to the calculations displayed in the graph and table. Both the frontend and backend are hosted on AWS.
