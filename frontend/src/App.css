@@ -289,51 +289,57 @@ tbody tr:hover {
    Commonly around 428px wide in portrait mode */
 @media (max-width: 430px) {
      body {
-       font-size: 0.95rem; /* Slightly smaller base font to avoid overly large text */
-       margin: 0; /* Remove extra horizontal margin */
+       font-size: 0.95rem;
+       margin: 0;
      }
    
      .App {
        padding: 10px;
-       max-width: 100%; /* Use full width to prevent cramped layout */
+       max-width: 100%;
      }
    
      h1 {
-       font-size: 1.2em; /* Smaller than before, reduces top-heading dominance on small screen */
+       font-size: 1.2em;
        margin-bottom: 20px;
      }
    
      .sliders-row {
        flex-direction: column;
-       gap: 15px; /* Slightly smaller gap between sliders */
-       align-items: stretch; /* Ensure sliders take full width comfortably */
+       gap: 15px;
+       align-items: stretch;
      }
    
      .slider-group label {
-       font-size: 1em; /* Keep labels readable but not too large */
+       font-size: 1em;
      }
    
      .slider-group input[type="range"] {
-       height: 6px; /* Slightly smaller slider height */
+       height: 6px;
      }
    
      button {
        padding: 8px 15px;
-       font-size: 0.95em; /* Slightly smaller text for buttons */
+       font-size: 0.95em;
      }
    
      table {
-       font-size: 0.85em; /* Reduce table font-size to fit more data without wrapping */
+       font-size: 0.85em;
+       padding: 8px;
+       /* Enable horizontal scrolling for the table */
+       display: block;
+       overflow-x: auto;
+       white-space: nowrap;
      }
    
      th,
      td {
-       padding: 8px; /* Slightly tighter cell padding */
+       padding: 8px;
      }
    
-     /* If the chart looks too large, consider giving it some constraints:
-        Adjust as needed based on how it renders. */
      .chart-container {
        margin: 10px 0;
+       /* Allow horizontal scrolling if chart overflows */
+       overflow-x: auto;
+       max-width: 100%;
      }
    }
