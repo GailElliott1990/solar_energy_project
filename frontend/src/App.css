@@ -284,3 +284,38 @@ tbody tr:hover {
     padding: 12px 22px;
   }
 }
+
+/* iPhone 14 Pro Max (or similarly large iPhones)
+   Commonly around 428px wide in portrait mode */
+@media (max-width: 430px) {
+  body {
+    font-size: 1rem; /* Slightly larger if needed */
+    margin: 0 10px;  /* Adjust margins to give a bit more space */
+  }
+
+  .App {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 1.4em; /* Slight increase for better readability on a smaller screen */
+  }
+
+  .sliders-row {
+    flex-direction: column;
+    gap: 20px; /* Tighten gaps slightly for smaller screen */
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 1em; /* Ensuring buttons remain comfortably tappable */
+  }
+
+  table {
+    font-size: 0.9em; /* Adjust table text slightly to fit the narrower screen */
+  }
+
+  /* If you have any specific elements that look crowded,
+     consider reducing padding or margins further here. */
+}
