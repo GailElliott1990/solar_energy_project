@@ -83,7 +83,7 @@ function App() {
       {/* Subtle GitHub link at the top right or top section */}
       <a 
         className="github-link" 
-        href="https://github.com/yourusername/yourrepo" 
+        href="https://github.com/GailElliott1990/solar_energy_project" 
         target="_blank" 
         rel="noopener noreferrer"
       >
